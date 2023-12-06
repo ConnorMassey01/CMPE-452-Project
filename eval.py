@@ -4,11 +4,10 @@ from pycocoevalcap.cider.cider import Cider
 import json
 import time
 from openai import OpenAI
+from constants import API_KEY
 
 
-KEY = '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'
-
-client = OpenAI(api_key = KEY)
+client = OpenAI(api_key = API_KEY)
 
 def get_completion(prompt, model='gpt-3.5-turbo-1106'):
     messages = [{"role": "user", "content": prompt}]
